@@ -1,0 +1,11 @@
+#container {
+    background-color: aqua;
+    border: 50px;
+    border-radius: 2px;
+}
+
+#root {
+    background-color: darkorchid;
+    border: 50px;
+    border-radius: 2px;
+}

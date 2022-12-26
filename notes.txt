@@ -1,0 +1,64 @@
+>>Emmet : Emmet is a word that originally meant ant, a small insect that can carry over 50 times of its weight. 
+This word is also similar to "emit," which is basically what Emmet does when it expands abbreviations.
+
+Link of Emmet Cheat-sheet : https://docs.emmet.io/cheat-sheet/
+
+*************************************************************************************************************************
+
+>>Library & Framework : Both frameworks and libraries are code written by someone else that is used to help solve common problems.
+
+The main differnce between Libray and Framework is "Inversion of Control".
+
+When you use a library, you are in charge of the flow of the application. You are choosing when and where to call the library. 
+When you use a framework, the framework is in charge of the flow. It provides some places for you to plug in your code, but it 
+calls the code you plugged in as needed.
+
+*****************************************************************************************************************************
+
+>>CDN : A content delivery network (CDN) refers to a geographically distributed group of servers which work together to provide 
+fast delivery of Internet content.
+A CDN allows for the quick transfer of assets needed for loading Internet content including HTML pages, javascript files, stylesheets, 
+images, and videos. The popularity of CDN services continues to grow, and today the majority of web traffic is served through CDNs, 
+including traffic from major sites like Facebook, Netflix, and Amazon.
+
+A properly configured CDN may also help protect websites against some common malicious attacks, such as Distributed Denial of Service 
+(DDOS) attacks.
+
+React CDN Links : 
+    Dev : <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+          <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+          
+    Prod (Minified and optimized production versions of React) : 
+           <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+           <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+********************************************************************************************************************************
+
+>>Crossorigin : The crossorigin attribute sets the mode of the request to an HTTP CORS(Cross-Origin Resource Sharin) Request.
+Web pages often make requests to load resources on other servers. Here is where CORS comes in.
+A cross-origin request is a request for a resource (e.g. style sheets, iframes, images, fonts, or scripts) from another domain.
+
+********************************************************************************************************************************
+
+>>Why React is named React : React was developed for applications (Facebook) that have constantly changing data. Since React is a 
+front-end framework or the “View” in MVC, this means that as the user clicks around and changes the app's data, the view should “react” 
+or change with those user events 
+
+Originally it was named as "FBolt" but realizing that FBolt wouldn't be a great name for the library when used on it's own they updated
+it to "React" giving following explanation -
+    "I might add for the sake of discussion, that many systems advertise some kind of reactivity, but they usually require that you set
+     up some kind of point-to-point listeners and won’t work on structured data. This API reacts to any state or property changes, and 
+     works with data of any form (as deeply structured as the graph itself) so I think the name is fitting."
+
+*************************************************************************************************************************************
+
+>>React and ReactDOM : React library is responsible for creating views(User Interfaces) and ReactDOM library is responsible to actually 
+render UI in the browser. 
+
+Before v0.14 React Dom was part of ReactJs. The reason React and ReactDOM were split into two libraries was due to the arrival of React 
+Native. React contains functionality utilised in web and mobile apps. ReactDOM functionality is utilised only in web apps.
+
+**************************************************************************************************************************************
+
+
+
