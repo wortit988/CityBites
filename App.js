@@ -1,41 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-//Printing Namste World using JavaScript
+//React-Element
+const title = (
+    <h1 id="title" key="h5" className="heading">
+        Namaste React!
+    </h1>)
 
-const container = document.getElementById("container");
+//React-Component - Functional Component
 
-const heading2 = document.createElement("h2");
-
-heading2.innerHTML = "Namaste World From JavaScript!";
-
-container.appendChild(heading2);
-
-//Printing Namste World using React
-
-//creating two headers using React
-
-const heading3 = React.createElement("h3", 
-{
-    id: "title",
-    key: "h3",
-}, 
-"Namaste From React1!");
-
-const heading4 = React.createElement("h4", 
-{
-    id: "title",
-    key: "h4",
-}, 
-"Namaste From React2!");
-
-//creating a div to enclose both headers using react
-
-const container2 = React.createElement("div", 
-{
-    id: "container2",
-}, 
-[heading3, heading4]);
+const HeaderComponent = () => {
+    return (
+        <div>
+            {title}
+            <h2>Namste Everyone using Functional Component</h2>
+            <h3>This is a demo h3 tag</h3>
+        </div>
+    )
+}
 
 //creating root in React
 
@@ -43,7 +25,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 //Rendering container using React
 
-root.render(container2);
+root.render(<HeaderComponent />);
 
 
 
