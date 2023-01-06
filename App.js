@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 //Printing Namste World using JavaScript
 
 const container = document.getElementById("container");
@@ -15,12 +18,14 @@ container.appendChild(heading2);
 const heading3 = React.createElement("h3", 
 {
     id: "title",
+    key: "h3",
 }, 
 "Namaste From React1!");
 
 const heading4 = React.createElement("h4", 
 {
     id: "title",
+    key: "h4",
 }, 
 "Namaste From React2!");
 
