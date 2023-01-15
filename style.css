@@ -1,11 +1,51 @@
-#container {
-    background-color: aqua;
-    border: 50px;
-    border-radius: 2px;
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border: 2px solid black;
+
 }
 
-#root {
-    background-color: #ff2013;
-    border: 50px;
-    border-radius: 2px;
+.logo {
+    /* height: 100px; */
+    width: 100px;
+
+}
+
+.nav-items > ul {
+    list-style-type: none;
+    display: flex;
+
+
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+}
+
+
+
+.card {
+    border: 1px solid black;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.card > img {
+    width: 100%;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.body {
+    margin: 10px;
+}
+
+.footer {
+    margin: 10px;
 }
