@@ -1,5 +1,6 @@
 import Logo from "../assets/imgs/Logo.jpg"
 import {Link} from "react-router-dom";
+import { useState } from "react";
 
 const Title = () =>{
     return (
@@ -10,7 +11,10 @@ const Title = () =>{
         </a>)
     }
 
+
+
 const Header = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     return (
         <div className="header">
             <Title />
@@ -30,6 +34,12 @@ const Header = () => {
                     </li>
                 </ul>
             </div>
+            <div className="login-btn">
+            {isLoggedIn ? (
+        <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+      ) : (
+        <button onClick={() => setIsLoggedIn(true)}>Login</button>
+      )}</div>
         </div>
     ) 
 };
