@@ -56,7 +56,6 @@ const Body = () => {
                     setFilteredRestaurants(data);
                 }}
             >Search</button>
-
         </div>
         <div className="restaurant-list">
             {
