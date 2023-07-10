@@ -22,25 +22,25 @@ const Header = () => {
             <Title />
             <div className="">
                 <ul className="flex py-10 gap-x-4">
-                    <li className="px-5 font-extrabold text-xl">
+                    <li className="px-5 font-extrabold text-xl hover:text-yellow-400">
                         <Link to="/">Home</Link>
                     </li>
-                    <li className="px-5 font-extrabold text-xl">
+                    <li className="px-5 font-extrabold text-xl hover:text-yellow-400">
                         <Link to="/about">About</Link>
                     </li>
-                    <li className="px-5 font-extrabold text-xl">
+                    <li className="px-5 font-extrabold text-xl hover:text-yellow-400">
                         <Link to="/contact">Contact</Link>
                     </li>
-                    <li className="px-5 font-extrabold text-xl">
+                    <li className="px-5 font-extrabold text-xl hover:text-yellow-400">
                         <Link to="/cart">Cart</Link>
                     </li>
-                    <li className="px-5 font-extrabold text-xl">
+                    <li className="px-5 font-extrabold text-xl hover:text-yellow-400">
                         <Link to="/citymart">Citymart</Link>
                     </li>
                 </ul>
             </div>
-            <div>
-            {isOnline ? (<h1 className="bg-green-400 rounded-full w-6 h-6 justify-center pl-2 pt-1">*</h1>) : (<h1 className="bg-red-400 rounded-full w-6 h-6 justify-center pl-2">!</h1>)
+            <div className =  "py-10 m-2">
+            {isOnline ? (<h1>✔</h1>) : (<h1>🔴</h1>)
 
             }
             </div>
