@@ -16,11 +16,11 @@ const Citymart = lazy(() => import ("./components/Citymart"));
 const About = lazy(() =>  import ("./components/About"));
 const AppLayout = () => {
     return(
-        <>
+        <div className="relative min-h-screen">
             <Header />
             <Outlet />
             <Footer />
-        </>
+        </div>
     )
 };
 

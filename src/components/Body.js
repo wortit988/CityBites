@@ -57,7 +57,7 @@ const Body = () => {
                 }}
             >Search</button>
         </div>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap pb-60">
             {
                 filteredRestaurants.map((restaurant) => {
                        return (<Link to={"/restaurant/"+restaurant.data.id} key={restaurant.data.id } className="link"><RestaurantCard {...restaurant.data} /></Link>)

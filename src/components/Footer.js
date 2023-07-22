@@ -2,7 +2,7 @@ import Logo from "../assets/imgs/Logo.jpg"
 
 const Footer = () => {
     return (
-        <div className="border-black">
+        <div className="border-black absolute left-0 right-0 bottom-0">
             <div className="bg-pink-400 flex justify-between py-10">
                 <div className="">
                 <a href="/">
