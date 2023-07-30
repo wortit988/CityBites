@@ -7,13 +7,13 @@ import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
 import {FETCH_RESTAURANTS_URL} from "../Constants";
 
+import Offline from "../assets/imgs/Offline.svg"
+
 
 
 const Body = () => {
-
     const [searchInput, setSearchInput] = useState("");
     const [allRestaurants, setAllRestaurants] = useState([]);
-    
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     useEffect(() => {
         // API call
@@ -23,17 +23,28 @@ const Body = () => {
     async function getRestaurants() {
         const data = await fetch (FETCH_RESTAURANTS_URL);
         const json = await data.json();
-        setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+        setAllRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         
-        setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+        setFilteredRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
 
+    
+
+    
     const isOnline = useOnline();
-
+    
     if(!isOnline) return (
-        <h1>You are Offline, Please Check Your Internet Connection!</h1>
+        <div className="p-5">
+            
+            <img className="h-52 mx-auto my-0" 
+             alt="Offline" 
+             src={Offline} />
+             <div className="text-center mt-2 font-bold">You are Offline, Please Check Your Internet Connection!</div>
+        </div>
+       
     )
-
+    
 
 
 
@@ -60,7 +71,7 @@ const Body = () => {
         <div className="flex flex-wrap pb-60">
             {
                 filteredRestaurants.map((restaurant) => {
-                       return (<Link to={"/restaurant/"+restaurant.data.id} key={restaurant.data.id } className="link"><RestaurantCard {...restaurant.data} /></Link>)
+                       return (<Link to={"/restaurant/"+restaurant.info.id} key={restaurant.info.id } className="link"><RestaurantCard {...restaurant.info} /></Link>)
                 }
 
                 )
