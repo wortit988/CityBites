@@ -24,7 +24,6 @@ const Body = () => {
         const data = await fetch (FETCH_RESTAURANTS_URL);
         const json = await data.json();
         setAllRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         
         setFilteredRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
