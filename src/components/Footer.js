@@ -1,8 +1,11 @@
 import Logo from "../assets/imgs/Logo.jpg"
+import { useContext } from "react";
+import UserContext from "../utils/userContext";
 
 const Footer = () => {
+    const { user } = useContext(UserContext);
     return (
-        <div className="border-black absolute left-0 right-0 bottom-0">
+        <div className="border-black left-0 right-0 bottom-0">
             <div className="bg-pink-400 flex justify-between py-10">
                 <div className="">
                 <a href="/">
@@ -10,6 +13,7 @@ const Footer = () => {
              alt="logo" 
              src={Logo} /></a> 
              </div>
+             <span className="py-6 font-bold text-white">This site is developed by {user.name} - {user.email}</span>
                 <div className="text-white font-bold py-6">© 2023 Wortit</div>
                 <div className="flex px-10">
                     <a className="px-7" href="https://www.facebook.com/swiggy.in" rel="nofollow noopener" alt="facebook" target="_blank">

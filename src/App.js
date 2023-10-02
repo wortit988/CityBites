@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from "react";
+import React, {lazy, Suspense, useState} from "react";
 import ReactDOM from "react-dom/client";
 import {IMG_CDN_URL, restaurantList} from "./Constants";
 import Header from "./components/Header";
@@ -11,15 +11,27 @@ import Profile from "./components/Profile";
 import RestaurantDetails from "./components/RestaurantDetails";
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import Shimmer from "./components/Shimmer";
+import UserContext from "./utils/userContext";
 
 const Citymart = lazy(() => import ("./components/Citymart"));
 const About = lazy(() =>  import ("./components/About"));
 const AppLayout = () => {
+    const [user, setUser] = useState({
+        name: "Wortit",
+        email: "wortit@gmail.com",
+      });
+
     return(
         <div className="relative min-h-screen">
-            <Header />
-            <Outlet />
-            <Footer />
+            <UserContext.Provider
+            value={{
+                user: user,
+                setUser: setUser,
+            }}>
+                <Header />
+                <Outlet />
+                <Footer />
+            </UserContext.Provider>
         </div>
     )
 };
