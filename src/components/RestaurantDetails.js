@@ -35,11 +35,12 @@ const RestaurantDetails = () => {
     
             <div className="p-4 m-4">
                 <h2 className="font-bold text-2xl">Menu</h2>
-                <ul className="list-disc">{Object.values(restaurantDetails?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards).map((item) => {
+                <ul className="list-disc" data-testid="menu">{Object.values(restaurantDetails?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards).map((item) => {
                    
                     return (<li key={item?.card?.info?.id}>{item?.card?.info?.name} -{" "}
                     <button
                       className="p-1 bg-green-50"
+                      data-testid="addBtn"
                       onClick={() => addFoodItem(item?.card?.info)}
                     >
                       Add

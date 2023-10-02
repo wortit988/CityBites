@@ -62,13 +62,14 @@ const Body = () => {
             />
             <button 
                 className="bg-purple-900 text-white p-2 m-2 rounded-md hover:bg-gray-500"
+                data-testid="search-btn"
                 onClick={() => {
                     const data = filterData(searchInput, allRestaurants);
                     setFilteredRestaurants(data);
                 }}
             >Search</button>
         </div>
-        <div className="flex flex-wrap pb-60">
+        <div className="flex flex-wrap pb-60" data-testid="res-list">
             {
                 filteredRestaurants.map((restaurant) => {
                        return (<Link to={"/restaurant/"+restaurant.info.id} key={restaurant.info.id } className="link"><RestaurantCard {...restaurant.info} /></Link>)

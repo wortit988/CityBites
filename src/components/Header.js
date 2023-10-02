@@ -9,7 +9,7 @@ import store from "../utils/store";
 const Title = () =>{
     return (
         <a href="/">
-            <img className="h-28 p-2 rounded-full"
+            <img data-testid="logo" className="h-28 p-2 rounded-full"
              alt="logo" 
              src={Logo} />
         </a>)
@@ -40,12 +40,12 @@ const Header = () => {
                     <li className="px-5 font-extrabold text-xl hover:text-yellow-400">
                         <Link to="/citymart">Citymart</Link>
                     </li>
-                    <li className="px-5 font-extrabold text-xl hover:text-yellow-400">
+                    <li className="px-5 font-extrabold text-xl hover:text-yellow-400" data-testid="cart">
                         <Link to="/cart">Cart - {cartItems.length} items</Link>
                     </li>
                 </ul>
             </div>
-            <div className =  "py-10 m-2">
+            <div className =  "py-10 m-2" data-testid="online-status">
             {isOnline ? (<h1>✔</h1>) : (<h1>🔴</h1>)
 
             }
