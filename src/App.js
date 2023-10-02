@@ -12,6 +12,8 @@ import RestaurantDetails from "./components/RestaurantDetails";
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/userContext";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 const Citymart = lazy(() => import ("./components/Citymart"));
 const About = lazy(() =>  import ("./components/About"));
@@ -23,15 +25,17 @@ const AppLayout = () => {
 
     return(
         <div className="relative min-h-screen">
-            <UserContext.Provider
-            value={{
-                user: user,
-                setUser: setUser,
-            }}>
-                <Header />
-                <Outlet />
-                <Footer />
-            </UserContext.Provider>
+            <Provider store = {store}>
+                <UserContext.Provider
+                    value={{
+                        user: user,
+                        setUser: setUser,
+                    }}>
+                    <Header />
+                    <Outlet />
+                    <Footer />
+                </UserContext.Provider>
+            </Provider>
         </div>
     )
 };
